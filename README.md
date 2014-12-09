@@ -1,3 +1,4 @@
+# Do not use it!
 # OpenShift Nginx 1.6.1 PHP-FPM 5.4 Cartridge
 This cartridge serves static content using nginx web server, passing requests to .php files down to php-fpm.
 
@@ -7,7 +8,7 @@ Place your php files inside php/ dir, commit and push.
 ## Usage
 
 ```bash
-$ rhc app create <appname> https://reflector-getupcloud.getup.io/reflect?github=ranib/openshift-nginx-php-fpm-fastcgi
+$ rhc app create <appname> https://reflector-getupcloud.getup.io/reflect?github=ApnaDrama/openshift-nginx-php-fpm-fastcgi
 $ cd <appname>
 $ echo '<?php phpinfo(); ?>' > php/info.php
 $ echo 'Hello World' >> www/static/hello.html
