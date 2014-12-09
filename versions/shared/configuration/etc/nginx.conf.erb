@@ -21,11 +21,11 @@ http {
 
     access_log         <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/nginx_access.log;
 
-    client_body_temp_path <%= ENV['TMP'] %>/nginx/client_body;
-    proxy_temp_path       <%= ENV['TMP'] %>/nginx/proxy;
-    fastcgi_temp_path     <%= ENV['TMP'] %>/nginx/fastcgi;
-    uwsgi_temp_path       <%= ENV['TMP'] %>/nginx/uwsgi;
-    scgi_temp_path        <%= ENV['TMP'] %>/nginx/scgi;
+    client_body_temp_path <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/client_body;
+    proxy_temp_path       <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/proxy;
+    fastcgi_temp_path     <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/fastcgi;
+    uwsgi_temp_path       <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/uwsgi;
+    scgi_temp_path        <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>/scgi;
 
     include <%= ENV['OPENSHIFT_REPO_DIR'] %>/config/nginx.d/*.conf;
 }
