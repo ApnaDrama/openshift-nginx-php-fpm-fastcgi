@@ -8,8 +8,12 @@
 ; Include one or more files. If glob(3) exists, it is used to include a bunch of
 ; files from a glob(3) pattern. This directive can be used everywhere in the
 ; file.
-include=<%= ENV['OPENSHIFT_PHP_DIR'] %>/configuration/etc/www.conf
-include=<%= ENV['OPENSHIFT_REPO_DIR'] %>/config/php-fpm.d/*.conf
+
+;include=<%= ENV['OPENSHIFT_PHP_DIR'] %>/configuration/etc/www.conf
+;include=<%= ENV['OPENSHIFT_REPO_DIR'] %>/config/php-fpm.d/*.conf
+
+include=<%= ENV['OPENSHIFT_REPO_DIR'] %>/config/php-fpm.d/www.conf
+include=<%= ENV['OPENSHIFT_REPO_DIR'] %>/config/php-fpm.d/export_env.conf
 
 ;;;;;;;;;;;;;;;;;;
 ; Global Options ;
